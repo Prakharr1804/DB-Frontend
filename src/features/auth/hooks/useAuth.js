@@ -39,11 +39,11 @@ export const useAuth = () => {
         }
     }
 
-    return (
+    return {
         loading,
         user,
         handleLogin,
         handleSendOTP,
         handleRegister
-    )
+    }
 }
