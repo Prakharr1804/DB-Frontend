@@ -11,7 +11,7 @@ export async function register({ email, password, role, attributes }) {
             email, password, role, attributes
         })
 
-        return response.data
+        return response
     }catch(err){
         console.log(err);
     }
@@ -23,7 +23,7 @@ export async function sendOTP({email}) {
             email
         })
 
-        return response.data
+        return response
     } catch (error) {
         console.log(error)
     }
@@ -36,7 +36,7 @@ export async function login({email, password}) {
             email, password
         })
 
-        return response.data
+        return response
         
     } catch (error) {
         console.log(error)
