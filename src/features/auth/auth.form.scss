@@ -23,6 +23,14 @@ main{
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
+
+        select{
+            border: none;
+            outline: none;
+            padding-inline: 1rem;
+            padding-block: 0.75rem;
+            border-radius: 0.75rem;
+        }
     }
 
     input{
