@@ -19,8 +19,20 @@ export async function register({ email, password, role, attributes }) {
 
 export async function sendOTP({email}) {
     try {
-        const response = await axios.post('/auth/verifyOtp', {
+        const response = await axios.post('/auth/initiate', {
             email
+        })
+
+        return response
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+export async function verifyOtp({email, otp}) {
+    try {
+        const response = await axios.post('/auth/verifyOtp', {
+            email, otp
         })
 
         return response
